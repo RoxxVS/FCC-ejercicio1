@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatPhotoAppt</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
@@ -14,28 +15,34 @@
         </section>
         <section>
             <h2>Cat lists</h2>
-            <h3>Things cats love:</h3>
-            <ul>
-                <li>Cat nip</li>
-                <li>laser pointers</li>
-                <li>lasagna</li>
-            </ul>
-            <figure>
-                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate">
-                <figcaption>Cats <em>love</em> lasagna</figcaption>
-            </figure>
-            <h3>Top 3 things cats hate:</h3>
-            <ol>
-                <li>flea treatment</li>
-                <li>thunder</li>
-                <li>other cats</li>
-            </ol>
-            <figure>
-                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field">
-                <figcaption>Cats <strong>hate</strong> other cats</figcaption>
-            </figure>
+            <div class="lists">
+                <div>
+                    <h3>Things cats love:</h3>
+                    <ul>
+                        <li>Cat nip</li>
+                        <li>laser pointers</li>
+                        <li>lasagna</li>
+                    </ul>
+                    <figure>
+                        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate">
+                        <figcaption>Cats <em>love</em> lasagna</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <h3>Top 3 things cats hate:</h3>
+                    <ol>
+                        <li>flea treatment</li>
+                        <li>thunder</li>
+                        <li>other cats</li>
+                    </ol>
+                    <figure>
+                        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field">
+                        <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
-        <section>
+        <section class="form">
             <form action="https://freecatphotoapp.com/submit-cat-photo" method="post">
                 <fieldset>
                     <legend>Is your cat an indoor or outdoos cat?</legend>
@@ -44,12 +51,16 @@
                 </fieldset>
                 <fieldset>
                     <legend>What's your cat's personality?</legend>
-                    <input type="checkbox" id="loving" name="personality" value="loving" checked><label for="loving">Loving</label>
-                    <input type="checkbox" id="lazy" name="personality" value="lazy"><label for="lazy">Lazy</label>
-                    <input type="checkbox" id="energetic" name="personality" value="energetic" checked><label for="energetic">Energetic</label>
+                    <div class="check">
+                        <input type="checkbox" id="loving" name="personality" value="loving" checked><label for="loving">Loving</label>
+                        <input type="checkbox" id="lazy" name="personality" value="lazy"><label for="lazy">Lazy</label>
+                        <input type="checkbox" id="energetic" name="personality" value="energetic" checked><label for="energetic">Energetic</label>
+                    </div>    
                 </fieldset>
-                <input type="text" name="catphotourl" placeholder="cat photo url" required>
-                <button type="submit">Submit</button>
+                <div class="submit">
+                    <input type="text" name="catphotourl" placeholder="cat photo url" required>
+                    <button type="submit">Submit</button>
+                </div>    
             </form>
         </section>
     </main>
